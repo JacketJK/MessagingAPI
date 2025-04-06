@@ -10,15 +10,15 @@
 
     <style>
         body {
-            overflow: hidden;
+            margin: 0;
+            background-image: url('https://cdn.jsdelivr.net/gh/JacketJK/upload/RETROWAVE-OASIS-33331.png');
         }
     </style>
 </head>
 <body>
-    <img src="https://cdn.jsdelivr.net/gh/JacketJK/upload/RETROWAVE-OASIS-33331.png" alt="Logo" style="width: 100vw; height: 100vh;">
 
     <!-- Modal Structure -->
-    <div id="userModal" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; border: 1px solid #ccc; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); z-index: 1000;">
+    <div id="userModal" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; border: 1px solid #ccc; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); z-index: 1000; border-radius: 25px;">
         <p id="modalMessage"></p>
         <button id="copyButton">Copy UserID</button>
         <button onclick="closeModal()">Close</button>
