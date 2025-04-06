@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIFF Example</title>
+</head>
+<body>
+    <h1>hello world</h1>
+
+    <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+    <script>
+    async function initLIFF() {
+        try {
+            await liff.init({ liffId: '2006578501-GpdpMJEN' }); // ❗ เปลี่ยนเป็น LIFF ID ที่แท้จริง
+
+            if (!liff.isLoggedIn()) {
+                liff.login();
+                return;
+            }
+
+            const profile = await liff.getProfile();
+            const userId = profile.userId;
+            const displayName = profile.displayName;
+
+            alert(`Hello ${displayName}\nUserID: ${userId}`);
+        } catch (err) {
+            console.error('LIFF Error:', err);
+            alert('เกิดข้อผิดพลาดใน LIFF: ' + err.message);
+        }
+    }
+
+    initLIFF();
+    </script>
+</body>
+</html>
